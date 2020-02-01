@@ -1,108 +1,59 @@
-# Unit 06 Server-Side APIs Homework: Weather Dashboard
+# Unit 05 Third-Party APIs Homework: Day Planner
 
-Developers are often tasked with retrieving data from another application's API and using it in the context of their own. Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. In this homework assignment, your challenge is to build a weather dashboard using the OpenWeather API.
+Create a simple calendar application that allows the user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 
+The app should display standard business hours (9 a.m. to 5 p.m.). Each time slot should represent one hour and contain the following:
 
-## Instructions
+* The time
 
-Build a weather dashboard application with search functionality to find current weather conditions and the future weather outlook for multiple cities. Following the [common templates for user stories](https://en.wikipedia.org/wiki/User_story#Common_templates), we can frame this challenge as follows:
+* A field to hold user input
 
-```
-As a traveler
-I want to see the weather outlook for multiple cities
-so that I can plan a trip accordingly
-```
+* A save button
 
-How do you deliver this? Here are some guidelines:
+Clicking on the save button will store the time and user input in `localStorage`.
 
-* Use the [OpenWeather API](https://openweathermap.org/api) to retrieve weather data for cities. The documentation includes a section called "How to start" that will provide basic setup and usage instructions.
+Near the top of the calendar, the application should display the current day. Additionally, each hour should be color coded to reflect whether the time slot is in the past, the present, or the future. This will change depending on the time of day.
 
-* Use AJAX to hook into the API to retrieve data in JSON format.
+You'll need to use the [Moment.js](https://momentjs.com/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Moment.js in the browser.
 
-* Your app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+![day planner demo](./Assets/05-Third-Party-APIs-homework-demo.gif)
 
-* Display the following under current weather conditions:
+## User Story
 
-  * City
+AS AN employee with a busy schedule
 
-  * Date
+I WANT to add important events to a daily planner
 
-  * Icon image (visual representation of weather conditions)
+SO THAT I can manage my time effectively 
 
-  * Temperature
+## Business Context
 
-  * Humidity
-
-  * Wind speed
-
-  * UV index
-
-* Include a search history so that users can access their past search terms. Clicking on the city name should perform a new search that returns current and future conditions for that city. 
-
-* Include a 5-Day Forecast below the current weather conditions. Each day for the 5-Day Forecast should display the following:
-
-  * Date
-
-  * Icon image (visual representation of weather conditions)
-
-  * Temperature
-
-  * Humidity
-
-![weather dashboard](./Assets/06-Server-Side-APIs-homework-demo.png)
-
-
-### Hints
-
-* Create multiple functions within your application to handle the different parts of the dashboard:
-
-  * Current conditions
-  
-  * 5-Day Forecast
-  
-  * Search history
-
-  * UV index
-
-* You will need to make more than one AJAX call.
-
-* You will need to hardcode some of the parameters in the API's URL. User input will determine some of the other parameters.
-
-* Use `localStorage` to store any persistent data.
-
+Poor time management can result in missed meetings and deadlines or create the appearance of unprofessionalism. A daily planner allows employees to see their day at a glance, schedule time effectively, and improve productivity. 
 
 ## Minimum Requirements
 
 * Functional, deployed application.
 
-* GitHub repository with a unique name and a README describing the project.
+* GitHub repository with a unique name and a README describing project.
 
-* User can search for weather reports by city using the openweathermap API.
+* The application displays timeblocks for standard business hours (9 a.m. to 5 p.m.).
 
-* After searching for a city, the following information is displayed:
+* Each timeblock contains an input field and save button.
 
-  *  Current temperature
+* Clicking a timeblock's "Save" button stores the input text in local storage, allowing the text to persist when the application is refreshed.
 
-  *  Current humidity
+* The current day is displayed at the top of the calendar.
 
-  *  Windspeed
+* Each timeblock is color coded to indicate whether it is in a past, present, or future hour.
 
-  *  Uv index
+```
+GIVEN that an employee adds events to a specific hour in a calendar
 
-  *  5 day forecast
+WHEN the employee clicks the save button
 
-* Application uses icons to represent weather conditions.
-
-* Application stores previously searched for cities in localstorage and displays them to the user.
-
-* Application loads last searched city forecast on page load.
-
-## Bonus
-
-* Use the [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) to add the user's current location to the initial landing page.
-
-* Add the application to your portfolio.
-
+THEN events are saved in the timeblock for that hour
+```
+- - -
 
 ## Commit Early and Often
 
@@ -124,7 +75,6 @@ Follow these guidelines for committing:
 
 We would like you to have well over 200 commits by graduation, so commit early and often!
 
-
 ## Submission on BCS
 
 You are required to submit the following:
@@ -132,7 +82,6 @@ You are required to submit the following:
 * The URL of the deployed application
 
 * The URL of the GitHub repository
-
 
 - - -
 © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
