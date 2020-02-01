@@ -1,0 +1,16 @@
+.plannerItem
+{
+    width:100%;
+    margin: 3rem 0;
+    padding: .5rem 10px;
+    border: solid black 2px;
+    border-radius: 5px;
+    background-color: #EFFD60;
+    resize:none;
+    outline:none;
+}
+
+.scheduleRow
+{
+    background-color:#EFFD60;
+}
