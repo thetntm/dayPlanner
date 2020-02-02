@@ -36,9 +36,9 @@ for (let i = 0; i < numberOfRows; i++) {
 
     //create our html elements
     let row = $('<div class="row scheduleRow">');
-    let labelCol = $('<div class="col-sm-1">');
+    let labelCol = $('<div class="col-md-1">');
     let label = $('<label for="planner' + i + '" class="plannerLabel align-middle" id="label' + i + '">' + time + '</label>')
-    let inputCol = $('<div class="col-sm-11">');
+    let inputCol = $('<div class="col-md-11">');
     let input = $('<input type="text" class="plannerItem align-middle" id="planner' + i + '">');
 
     //set their parenting structure
