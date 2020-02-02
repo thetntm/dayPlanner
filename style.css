@@ -1,16 +1,43 @@
+.pageHeader
+{
+    background-image: url(./Assets/HeaderImage.jpg);
+    color:white;
+    position: relative;
+}
+
 .plannerItem
 {
     width:100%;
-    margin: 3rem 0;
     padding: .5rem 10px;
     border: solid black 2px;
     border-radius: 5px;
-    background-color: #EFFD60;
+    background-color: #F9FDCE;
     resize:none;
     outline:none;
+}
+
+#saveBox
+{
+    border: solid grey 2px;
+    border-radius: 10px;
+    padding:15px;
+    display: none;
+}
+
+.plannerLabel
+{
+    padding: .5rem 10px;
+}
+
+.utilityRow
+{
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .scheduleRow
 {
     background-color:#EFFD60;
+    padding-top:20px;
+    padding-bottom:20px;
 }

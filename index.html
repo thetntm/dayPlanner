@@ -11,38 +11,49 @@
     <title>Document</title>
 </head>
 <body>
-    <!--Main Container-->
-    <div class="container">
+    <!--Header Container-->
+    <div class="container-fluid pageHeader">
         <!--Header Jumbotron-->
-        <div class="row">
-            <div class="col-12">
-                <div class="jumbotron">
-                    <h1>Day Planner</h1>
-                    <p>Plan your day!</p>
+        <div  class="row">
+            <div class="col-5 offset-1" style = "padding-top: 25px; padding-bottom: 25px;">
+                <h1>QuickPlanner</h1>
+                <p>Quick way to plan out your work day!</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="row utilityRow">
+            <div class="col-sm-12 text-center">
+                <div id = "saveBox">
+                    <p>You haven't Saved! Click this button and we'll remember your schedule, even if you leave and come back!</p>
+                    <button id="saveButton">Save!</button>
                 </div>
             </div>
         </div>
 
         <!--Planner Time Slots-->
-        <div class="row scheduleRow">
-            <div class="col-sm-2">
-                <label for="planner0">The Time Goes Here</label>
-            </div>
+        <div id="scheduleMain">
+            <!-- <div class="row scheduleRow">
+                <div class="col-sm-2">
+                    <label for="planner0" class="plannerLabel align-middle" id="label0">9:00</label>
+                </div>
 
-            <div class="col-sm-10">
-                <input type="text" class="plannerItem" id="planner0">
-            </div>
+                <div class="col-sm-10">
+                    <input type="text" class="plannerItem align-middle" id="planner0">
+                </div>
+            </div> -->
         </div>
 
     </div>
-
-
-    <!--My Scripts-->
-    <script src="script.js"></script>
 
     <!--Bootstrap Javascript-->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!--My Javascript-->
+    <script src="createScheduleRows.js"></script>
+    <script src="localStorageHandler.js"></script>
 </body>
 </html>
