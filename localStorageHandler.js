@@ -1,5 +1,14 @@
 //-------------------------VARIABLES----------------------------------
 
+//Global Variables
+
+var unSaved = false; //A Boolean Value that lets us know if the planner was changed without saving
+
+var storedPlanner = localStorage.getItem('QuickPlanner') //The schedule's data, for local storage purposes.
+
+
+//-------------------------DOM----------------------------------------
+
 //DOM Elements
 
 var saveButton = $("#saveButton"); //The button for saving work
@@ -7,12 +16,6 @@ var saveButton = $("#saveButton"); //The button for saving work
 var plannerItems = $(".plannerItem"); //Input fields for each item
 
 var saveBox = $("#saveBox");//The Div containing the Save button
-
-//Global Variables
-
-var unSaved = false; //A Boolean Value that lets us know if the planner was changed without saving
-
-var storedPlanner = localStorage.getItem('QuickPlanner') //The schedule's data, for local storage purposes.
 
 if (storedPlanner) //If there was data stored
 {
@@ -38,6 +41,7 @@ if (storedPlanner) //If there was data stored
         '', //4:30
         '', //5:00
         '', //5:30
+        '', //6:00
     ]
 }
 
