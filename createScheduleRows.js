@@ -86,4 +86,4 @@ for (let i = 0; i < numberOfRows; i++) {
 
 //---Set the Date---
 
-dateElement.text((currentDateObject.getMonth() + 1) + "/" + (currentDateObject.getDay() + 1) + "/" + currentDateObject.getFullYear());
+dateElement.text((currentDateObject.getMonth() + 1) + "/" + (currentDateObject.getDate() + 1) + "/" + currentDateObject.getFullYear());
