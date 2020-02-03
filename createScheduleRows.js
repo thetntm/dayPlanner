@@ -1,38 +1,40 @@
-var numberOfRows = 19;
+var dateElement = $("#dateDisplay");
+
+var currentDateObject = new Date();
+
+var numberOfRows = 9;
 
 var scheduleMain = $("#scheduleMain")
 
 const bgColors = [
-    "#352FB2",
-    "#3D43EE",
-    "#3C6CE8",
-    "#37B0E9",
-    "#46D381",
-    "#AAEA90",
-    "#EDFD60",
-    "#F5A640",
     "#F84C23",
-    "#FA0F13",
-    "#F84C23","#F5A640","#EDFD60","#AAEA90","#46D381","#37B0E9","#3C6CE8","#3D43EE","#352FB2"]
+    "#F5A640",
+    "#EDFD60",
+    "#AAEA90",
+    "#46D381",
+    "#37B0E9",
+    "#3C6CE8",
+    "#3D43EE",
+    "#352FB2"]
 
 const inputBGColors = [
-    "#7674B2",
-    "#9EA0EE",
-    "#97ADE8",
-    "#94CCE3",
-    "#89D3A8",
-    "#CFE8C5",
-    "#F5FDA4",
-    "#F2CE9D",
+    "#F8A1A3",
     "#F8B2A1",
-    "#F8A1A3","#F8B2A1","#F2CE9D","#F5FDA4","#CFE8C5","#89D3A8","#94CCE3","#97ADE8","#9EA0EE","#7674B2"]
+    "#F2CE9D",
+    "#F5FDA4",
+    "#CFE8C5",
+    "#89D3A8",
+    "#94CCE3",
+    "#97ADE8",
+    "#9EA0EE",
+    "#7674B2"]
 
 for (let i = 0; i < numberOfRows; i++) {
 
     //get the time
-    const timeHour = (Math.floor(i/2) + 8) % 12 + 1;
-    const timeMinutes = i % 2 * 3;
-    const time = timeHour + ":" + timeMinutes + "0";
+    const timeHour = (i + 8) % 12 + 1;
+    // const timeMinutes = i % 2 * 3;
+    const time = timeHour + ":00";
 
     //create our html elements
     let row = $('<div class="row scheduleRow">');
@@ -53,6 +55,14 @@ for (let i = 0; i < numberOfRows; i++) {
 
     //set additional values
 
-    row.css("background-color",bgColors[i]);
-    input.css("background-color",inputBGColors[i]);
+    const currentHour = Math.min(Math.max(currentDateObject.getHours(),9),17); //Get the current hour between 9 and 17.
+
+    const differencial = Math.abs((i+9)-currentHour);
+
+    row.css("background-color",bgColors[differencial]);
+    input.css("background-color",inputBGColors[differencial]);
 }
+
+//---Set the Date---
+
+dateElement.text((currentDateObject.getMonth() + 1) + "/" + (currentDateObject.getDay() + 1) + "/" + currentDateObject.getFullYear());
