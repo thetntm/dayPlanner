@@ -28,6 +28,17 @@ const inputBGColors = [
     "#9EA0EE",
     "#7674B2"]
 
+const bgColorsDarkened = [
+    "#80080A",
+    "#802712",
+    "#805521",
+    "#787F30",
+    "#5D7F4E",
+    "#2A7F4E",
+    "#1D657F",
+    "#213B7F",
+    "#161954"]
+
 for (let i = 0; i < numberOfRows; i++) {
 
     //get the time
@@ -54,12 +65,20 @@ for (let i = 0; i < numberOfRows; i++) {
 
     //set additional values
 
-    const currentHour = Math.min(Math.max(currentDateObject.getHours(),9),17); //Get the current hour between 9 and 17.
+    const currentHour = currentDateObject.getHours(); //Get the current hour. Modify this line to test for different times of day.
 
-    const differencial = Math.abs((i+9)-currentHour);
+    const differencial = Math.min(Math.max(-8,i-(currentHour-9)),8);
+    //Calculate the differencial between the two values, maxing out at 8 and -8 (representing blue and darkened blue)
 
-    row.css("background-color",bgColors[differencial]);
-    input.css("background-color",inputBGColors[differencial]);
+    if (differencial >= 0)
+    {
+        row.css("background-color",bgColors[Math.abs(differencial)]);
+    } else
+    {
+        row.css("background-color",bgColorsDarkened[Math.abs(differencial)]);
+    }
+
+    input.css("background-color",inputBGColors[Math.abs(differencial)]);
 }
 
 //---Set the Date---
