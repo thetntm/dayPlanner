@@ -18,7 +18,6 @@ const bgColors = [
     "#352FB2"]
 
 const inputBGColors = [
-    "#F8A1A3",
     "#F8B2A1",
     "#F2CE9D",
     "#F5FDA4",
