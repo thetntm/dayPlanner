@@ -54,7 +54,6 @@ function updatePlanner() //updatePlanner : Updates storedPlanner to match user i
     for (let i = 0; i < storedPlanner.length; i++) {
         storedPlanner[i] = $("#planner" + i).val();
     }
-    console.log(storedPlanner);
 }
 
 function loadPlanner() //loadPlanner : Set the values for the planner objects to the stored values
