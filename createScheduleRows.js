@@ -7,7 +7,7 @@ var numberOfRows = 9;
 var scheduleMain = $("#scheduleMain")
 
 const bgColors = [
-    "#F84C23",
+    "#FF4D36",
     "#F5A640",
     "#EDFD60",
     "#AAEA90",
@@ -18,9 +18,9 @@ const bgColors = [
     "#352FB2"]
 
 const inputBGColors = [
-    "#F8B2A1",
-    "#F2CE9D",
-    "#F5FDA4",
+    "#EEA5A5",
+    "#ECB8A2",
+    "#FDD8A4",
     "#CFE8C5",
     "#89D3A8",
     "#94CCE3",
