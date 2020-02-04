@@ -48,7 +48,7 @@ for (let i = 0; i < numberOfRows; i++) {
     // const timeMinutes = i % 2 * 3;
     let time = timeHour + ":00";
 
-    if (timeHour < 6)
+    if (timeHour < 6 || timeHour == 12)
     {
         time += " PM";
     } else
