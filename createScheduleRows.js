@@ -48,6 +48,14 @@ for (let i = 0; i < numberOfRows; i++) {
     // const timeMinutes = i % 2 * 3;
     const time = timeHour + ":00";
 
+    if (timeHour < 6)
+    {
+        time += " PM";
+    } else
+    {
+        time += " AM";
+    }
+
     //create our html elements
     let row = $('<div class="row scheduleRow">');
     let labelCol = $('<div class="col-md-1">');
@@ -86,4 +94,4 @@ for (let i = 0; i < numberOfRows; i++) {
 
 //---Set the Date---
 
-dateElement.text((currentDateObject.getMonth() + 1) + "/" + (currentDateObject.getDate() + 1) + "/" + currentDateObject.getFullYear());
+dateElement.text((currentDateObject.getMonth() + 1) + "/" + (currentDateObject.getDate()) + "/" + currentDateObject.getFullYear());
